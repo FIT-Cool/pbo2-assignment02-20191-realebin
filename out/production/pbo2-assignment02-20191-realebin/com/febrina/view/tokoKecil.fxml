@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.input.*?>
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.febrina.controller.TokoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.febrina.controller.TokoController">
    <top>
       <MenuBar prefHeight="17.0" prefWidth="646.0" BorderPane.alignment="CENTER">
         <menus>
@@ -58,9 +67,9 @@
                         <ComboBox fx:id="cbxKategori" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <HBox prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <children>
-                              <Button fx:id="btSave" mnemonicParsing="false" text="Save" onMouseClicked="#FSave"/>
-                              <Button fx:id="btReset" mnemonicParsing="false" text="Reset" onMouseClicked="#FReset"/>
-                              <Button fx:id="btUpdate" mnemonicParsing="false" text="Update" onMouseClicked="#FUpdate"/>
+                              <Button fx:id="btSave" mnemonicParsing="false" onMouseClicked="#FSave" text="Save" />
+                              <Button fx:id="btReset" mnemonicParsing="false" onMouseClicked="#FReset" text="Reset" />
+                              <Button fx:id="btUpdate" mnemonicParsing="false" onMouseClicked="#FUpdate" text="Update" />
                            </children>
                         </HBox>
                      </children>
@@ -79,7 +88,7 @@
                      <children>
                         <Label text="Category Name" />
                         <TextField fx:id="txtKategori" GridPane.columnIndex="1" />
-                        <Button fx:id="btKategori" alignment="CENTER" mnemonicParsing="false" text="Save Category" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Button fx:id="btKategori" alignment="CENTER" mnemonicParsing="false" onAction="#btnSaveCategory" text="Save Category" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>

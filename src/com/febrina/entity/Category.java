@@ -10,4 +10,9 @@ public class Category {
     public void set_namaCat(String _namaCat) {
         this._namaCat = _namaCat;
     }
+
+    @Override
+    public String toString() {
+        return get_namaCat();
+    }
 }

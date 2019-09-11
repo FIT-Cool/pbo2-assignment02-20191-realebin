@@ -3,7 +3,7 @@ package com.febrina.entity;
 public class Item {
     public String _name;
     public Double _price;
-    public String _category;
+    public Category _category;
 
     public String get_name() {
         return _name;
@@ -21,11 +21,11 @@ public class Item {
         this._price = _price;
     }
 
-    public String get_category() {
+    public Category get_category() {
         return _category;
     }
 
-    public void set_category(String _category) {
+    public void set_category(Category _category) {
         this._category = _category;
     }
 }
