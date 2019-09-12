@@ -1,5 +1,10 @@
 package com.febrina.entity;
 
+
+/**
+ * Class Category
+ * @author Febrina 1772006
+ */
 public class Category {
     public String _namaCat;
 

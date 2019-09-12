@@ -6,6 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Class Main
+ * @author Febrina 1772006
+ */
 public class Main extends Application {
 
     @Override

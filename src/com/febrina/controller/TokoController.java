@@ -15,6 +15,11 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Class TokoController
+ * @author Febrina 1772006
+ */
+
 public class TokoController implements Initializable {
 
     @FXML
@@ -46,6 +51,10 @@ public class TokoController implements Initializable {
     private ObservableList<Category> _cat;
     private Item selectedItems;
 
+    /**
+     * Class initialize
+     * @author Febrina 1772006
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         _cat = FXCollections.observableArrayList();
@@ -67,6 +76,10 @@ public class TokoController implements Initializable {
         btUpdate.setDisable(true);
     }
 
+    /**
+     * Class tableClicked
+     * @author Febrina 1772006
+     */
     @FXML
     private void tableClicked(MouseEvent mouseEvent) {
         selectedItems = tbToko.getSelectionModel().getSelectedItem();
@@ -79,7 +92,10 @@ public class TokoController implements Initializable {
         }
    }
 
-
+    /**
+     * Class FSave
+     * @author Febrina 1772006
+     */
     @FXML
     private void FSave(MouseEvent mouseEvent) {
         int count = (int) _items.stream().filter(p -> p.get_name().
@@ -105,6 +121,10 @@ public class TokoController implements Initializable {
         }
     }
 
+    /**
+     * Class FReset
+     * @author Febrina 1772006
+     */
     @FXML
     private void FReset(MouseEvent mouseEvent) {
         txtHarga.clear();
@@ -113,6 +133,10 @@ public class TokoController implements Initializable {
 
     }
 
+    /**
+     * Class FUpdate
+     * @author Febrina 1772006
+     */
     @FXML
     private void FUpdate(MouseEvent mouseEvent) {
         int count = (int) _items.stream().filter(p -> p.get_name().
@@ -138,6 +162,11 @@ public class TokoController implements Initializable {
         btSave.setDisable(false);
     }
 
+
+    /**
+     * Class btnSaveCategory
+     * @author Febrina 1772006
+     */
     @FXML
     private void btnSaveCategory(ActionEvent actionEvent) {
         int count = (int) _cat.stream().filter(p -> p.get_namaCat().
